@@ -2,13 +2,13 @@ import importlib.resources
 
 import yaml
 
-from osc_senorge_plugin.rasters.senorge import SeNorgePlugin
+from senorge_geoservice_plugin.rasters.senorge import SeNorgePlugin
 
-PLUGIN_PATH = "osc_senorge_plugin.rasters.senorge.SeNorgePlugin"
+PLUGIN_PATH = "senorge_geoservice_plugin.rasters.senorge.SeNorgePlugin"
 
 
 def _templates():
-    res = importlib.resources.files("osc_senorge_plugin") / "rasters" / "senorge.yaml"
+    res = importlib.resources.files("senorge_geoservice_plugin") / "rasters" / "senorge.yaml"
     return yaml.safe_load(res.read_text(encoding="utf-8"))
 
 

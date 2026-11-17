@@ -3,36 +3,36 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "osc-senorge-plugin"
+name = "senorge-geoservice-plugin"
 version = "0.1.0"
-description = "seNorge 2018 daily temperature and precipitation as an installable Open Climate Service plugin."
+description = "seNorge 2018 daily temperature and precipitation as an installable Open Geo Service plugin."
 readme = "README.md"
 requires-python = ">=3.12"
 license = "BSD-3-Clause"
 authors = [{ name = "DHIS2 for Climate & Health" }]
-keywords = ["open-climate-service", "senorge", "climate", "dhis2"]
+keywords = ["open-geo-service", "senorge", "climate", "dhis2"]
 dependencies = [
-    "open-climate-service",
+    "open-geo-service",
 ]
 
 [project.urls]
-Homepage = "https://github.com/MasterMaps/osc-senorge-plugin"
-"Open Climate Service" = "https://github.com/dhis2/open-climate-service"
+Homepage = "https://github.com/MasterMaps/senorge-geoservice-plugin"
+"Open Geo Service" = "https://github.com/dhis2/open-geo-service"
 
-# Auto-discovered by Open Climate Service (dhis2/open-climate-service#118): the value
-# is this plugin's top-level import package. OCS loads its rasters/*.yaml templates,
+# Auto-discovered by Open Geo Service (dhis2/open-geo-service#118): the value
+# is this plugin's top-level import package. Open Geo Service loads its rasters/*.yaml templates,
 # and imports the ingestion plugin class by its dotted path at ingest time.
-[project.entry-points."open_climate_service.plugins"]
-senorge = "osc_senorge_plugin"
+[project.entry-points."open_geo_service.plugins"]
+senorge = "senorge_geoservice_plugin"
 
-# `open-climate-service` is declared as a bare dependency with no VCS source pin: a
-# plugin must not dictate which OCS revision an instance runs — the consuming instance
+# `open-geo-service` is declared as a bare dependency with no VCS source pin: a
+# plugin must not dictate which Open Geo Service revision an instance runs — the consuming instance
 # supplies the source (git branch/tag/PyPI) via its own [tool.uv.sources]. (For local
-# dev/CI of this plugin alone, install OCS explicitly, e.g. `uv pip install
-# "open-climate-service @ git+https://github.com/dhis2/open-climate-service.git".)
+# dev/CI of this plugin alone, install Open Geo Service explicitly, e.g. `uv pip install
+# "open-geo-service @ git+https://github.com/dhis2/open-geo-service.git".)
 
 [tool.hatch.build.targets.wheel]
-packages = ["osc_senorge_plugin"]
+packages = ["senorge_geoservice_plugin"]
 
 [dependency-groups]
 dev = ["pytest>=8", "pyyaml>=6"]

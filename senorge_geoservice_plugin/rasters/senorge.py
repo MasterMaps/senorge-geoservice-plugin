@@ -30,7 +30,7 @@ from typing import Any
 import numpy as np
 import xarray as xr
 
-from open_climate_service.streaming import BaseDatasetPlugin, daily_period_ids, normalize_period
+from open_geo_service.streaming import BaseDatasetPlugin, daily_period_ids, normalize_period
 
 logger = logging.getLogger(__name__)
 

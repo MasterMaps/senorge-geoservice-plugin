@@ -1,7 +1,7 @@
 # seNorge 2018 datasets.
 #
 # Source datasets are downloaded by SeNorgePlugin (in this folder). The derived
-# products (day-of-year normal, daily anomaly) are static outputs of OCS built-in
+# products (day-of-year normal, daily anomaly) are static outputs of Open Geo Service built-in
 # openEO workflows (climate_normal, climate_anomaly) run against the source data —
 # they ship here so the whole seNorge dataset family installs as one plugin.
 
@@ -21,7 +21,7 @@
       begin: "1957-01-01"
       resolution: P1D
   ingestion:
-    plugin: osc_senorge_plugin.rasters.senorge.SeNorgePlugin
+    plugin: senorge_geoservice_plugin.rasters.senorge.SeNorgePlugin
     params:
       variable: tg
   source_crs: EPSG:32633
@@ -57,7 +57,7 @@
       begin: "1957-01-01"
       resolution: P1D
   ingestion:
-    plugin: osc_senorge_plugin.rasters.senorge.SeNorgePlugin
+    plugin: senorge_geoservice_plugin.rasters.senorge.SeNorgePlugin
     params:
       variable: rr
   source_crs: EPSG:32633
